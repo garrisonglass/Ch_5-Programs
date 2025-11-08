@@ -1,40 +1,6 @@
 // Ch_5 Programs.cpp :Student line up 
  
-//#include <iostream>
-//using namespace std;
-//
-//int main()
-//{
-//	int EndSpace = 3,
-//		EndLine = 1;
-//
-//	for (int Row = 1; Row <= 10; Row++)
-//	{
-//		cout << "    ";
-//
-//		for (int Space = 1; Space <= EndSpace; Space++)
-//		{
-//			cout << " ";
-//		}
-//
-//		for (int Line = 1; Line <= EndLine; Line++)
-//		{
-//			cout << "+";
-//		}
-//		if (Row < 4)
-//		{
-//			EndSpace--;
-//			EndLine += 2;
-//		}
-//		else
-//		{
-//			EndSpace++;
-//			EndLine -= 2;
-//		}
-//		cout << endl;
-//	}
-//	return 0;
-//}
+
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -48,13 +14,13 @@ int main()
 
 	InputFile.open("LineUp.txt");// To open file
 	if (!InputFile)// Check for errors
-		cout << "Error openning file!\n";
+		cout << "Error opening file!\n";
 	else
 	{
 		InputFile >> Name;// Read first name
 		First = Last = Name;
 
-		while (!InputFile.eof())// Read till end of file
+		while (InputFile >> Name)// Read till end of file
 		{
 			if (Name > Last)// To sort students by name
 				Last = Name;
