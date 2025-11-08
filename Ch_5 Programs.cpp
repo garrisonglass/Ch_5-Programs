@@ -64,11 +64,8 @@ int main()
 			InputFile >> Name;// Read next student
 		}
 
-
-		// Display the student at the front of the line
-		// and which is at the back of the line.
-		cout << endl << First << " is at the front of the line.";
-		cout << Last << " is at the end of the line.\n";
+		cout << endl << First << " is at the front of the line.";// Display the student at the front of the line
+		cout << Last << " is at the end of the line.\n";// and which is at the back of the line.
 	}
 	InputFile.close();// Close file
 	return 0;
