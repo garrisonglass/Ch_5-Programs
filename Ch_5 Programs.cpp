@@ -17,8 +17,8 @@ int main()
 	
 	// cout << RandNum << endl;
 
-	cout << "\nI generated a random number between 1 and 25\n"
-		<< "Can you guess what my number is? ";
+	cout << "I'm thinking of a number between 1 and 25\n";
+	cout << "Can you guess what it is? ";
 	cin >> Guess;
 
 	while (Guess > RandNum)
@@ -34,13 +34,13 @@ int main()
 		count++;
 	}
 
-	if (count == 1)
+	if (count == 1)//off chance the 1st guess is correct
 	{
-		cout << "Congratulations. You figured out my number and you got it with " << count << " guess!\n\n";
+		cout << "Congratulations. You figured out my number and you got it with " << count << " guess!\n";
 	}
 	else
 	{
-		cout << "Congratulations. You figured out my number. It only took you " << count << " guesses!\n\n";
+		cout << "Congratulations. You figured out my number. It only took you " << count << " guesses!\n";
 	}
 	return 0;
 }
