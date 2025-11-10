@@ -6,20 +6,20 @@ using namespace std;
 
 int main()
 {
-	ifstream Inputfile;
-	Inputfile.open("People.txt");              // Open file
-	if (!Inputfile)							   // Test for open errors
+	ifstream input_file;
+	input_file.open("People.txt");// Open file
+	if (!input_file)// Test for open errors
 		cout << "Error opening file.\n";
 
-	int Pop;  								   // Population
+	int P_num;// Population
 
 	// Display Population Bar Chart Header
-	cout << "My Home Town\n"
-		<< "(each * represents 1000 people)\n\n";
+	cout << "My Home Town\n";
+	cout << "(each * represents 1000 people)\n\n";
 
-	for (int Year = 1; Year <= 6; Year++)
+	for (int year = 1; year <= 6; year++)
 	{  // One iteration per year
-		switch (Year)
+		switch (year)
 		{
 		case 1: cout << "1900 ";
 			break;
@@ -35,18 +35,17 @@ int main()
 			break;
 		}
 
-		Inputfile >> Pop;					 // Read from file
+		input_file >> P_num;// Read from file
 
-		Pop /= 1000;        				 // calculate one per 1000 people
+		P_num /= 1000;// calculate one per 1000 people
 
-		for (int Arisk = 1; Arisk <= Pop; Arisk++)
-		{  // Display one asterisk per iteration
-		   // One iteration per 1000 people 
+		for (int Arisk = 1; Arisk <= P_num; Arisk++)
+		{  // Display one asterisk per iteration and one iteration per 1000 people 
 			cout << "*";
 		}
 
 		cout << endl;
 	}
-	Inputfile.close(); 						// To close file
+	input_file.close();//Closes the file
 	return 0;
 }
