@@ -7,8 +7,7 @@ using namespace std;
 int main()
 {
 	int Days, SizeOfPop;// Days calculated for. The starting number of organisms
-	double	DailyIncrease;// The average daily population increase
-
+	double DailyIncrease;// The average daily population increase
 
 	cout << "What is the starting number of organisms? ";
 	cin >> SizeOfPop;
@@ -46,13 +45,11 @@ int main()
 	// Calculate and display daily increase
 	cout << "\nTable displaying population increase over " << Days << " days.\n";
 	cout << "      Day              Size of population\n";
-	//cout << "--------------------------------------------------\n";
 
-
-	for (int X = 1; X <= Days; X++)
+	for (int also_days = 1; also_days <= Days; also_days++)
 	{
-		cout << "      " << setw(2) << X << "                      "
-			<< SizeOfPop << endl;
+		cout << "      " << setw(2) << also_days << "                      ";
+		cout << SizeOfPop << endl;
 		SizeOfPop *= (1 + (DailyIncrease / 100));
 	}
 	return 0;
