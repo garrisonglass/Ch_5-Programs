@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	string name, first,	last;//Students name, if you ain't first you last
-	int count = 1;
+	int count = 1;//first used O but the count was off, so it starts with 1
 	ifstream InputFile;	// Define ifstream object
 
 
@@ -28,7 +28,7 @@ int main()
 				first = name;
 			if (name > last)
 				last = name;
-			count++;
+			count++;//counts iterations after the first read
 			
 		}
 
