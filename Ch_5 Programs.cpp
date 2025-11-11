@@ -44,7 +44,7 @@ int main()
 
 	// Calculate and display daily increase
 	cout << "\nTable displaying population increase over " << Days << " days.\n";
-	cout << "      Day              Size of population\n";
+	cout << "      Day              Size of population\n";//line up the table
 
 	for (int also_days = 1; also_days <= Days; also_days++)
 	{
