@@ -6,34 +6,34 @@ using namespace std;
 
 int main()
 {
-	int Days, SizeOfPop;// Days calculated for. The starting number of organisms
-	double DailyIncrease;// The average daily population increase
+	int Days, size_of_pop;// Days calculated for. The starting number of organisms
+	double daily_Avg;// The average daily population increase
 
 	cout << "What is the starting number of organisms? ";
-	cin >> SizeOfPop;
+	cin >> size_of_pop;
 	cout << "What is the average daily population increase\n";
 	cout << "(as a percentage of current population)? ";
-	cin >> DailyIncrease;
+	cin >> daily_Avg;
 	cout << "Enter the number of days of growth: ";
 	cin >> Days;
 
 	// Input Validation
-	while (SizeOfPop < 2 || DailyIncrease < 0 || Days < 1)
+	while (size_of_pop < 2 || daily_Avg < 0 || Days < 1)
 	{
-		if (SizeOfPop < 2)
+		if (size_of_pop < 2)//population is too small
 		{
 			cout << "Error!\nStarting size of population must be greater than 2.\n";
 			cout << "What is the starting number of organisms? ";
-			cin >> SizeOfPop;
+			cin >> size_of_pop;
 		}
-		else if (DailyIncrease < 0)
+		else if (daily_Avg < 0)//to calculate growth the change has to be greater than zero
 		{
 			cout << "Error!\nAverage daily population increase must be greater than 0.\n";
 			cout << "What is the average daily population increase?\n";
 			cout << "(as a percentage of current population)? ";
-			cin >> DailyIncrease;
+			cin >> daily_Avg;
 		}
-		else if (Days < 1)
+		else if (Days < 1)//number of days is not enough
 		{
 			cout << "Error!\nNumber of days must be greater than 0.\n";
 			cout << "Enter the number of days of growth: ";
@@ -49,8 +49,8 @@ int main()
 	for (int also_days = 1; also_days <= Days; also_days++)
 	{
 		cout << "      " << setw(2) << also_days << "                      ";
-		cout << SizeOfPop << endl;
-		SizeOfPop *= (1 + (DailyIncrease / 100));
+		cout << size_of_pop << endl;
+		size_of_pop *= (1 + (daily_Avg / 100));
 	}
 	return 0;
 }
