@@ -4,32 +4,32 @@
 using namespace std;
 
 int main()
-{
-	int EndSpace = 3,
-		EndLine = 1;
+{/*
+	int plus_per_line = 1;//plus character per line
 
-	for (int Row = 1; Row <= 10; Row++)
+	for (int row = 1; row <= 20; row++)//
 	{
-		cout << "    ";
-
-		for (int Space = 1; Space <= EndSpace; Space++)
-		{
-			cout << " ";
-		}
-
-		for (int Line = 1; Line <= EndLine; Line++)
+		for (int line = 1; line <= plus_per_line; line++)
 		{
 			cout << "+";
 		}
-		if (Row < 4)
+		if (row < 10)
 		{
-			EndSpace--;
-			EndLine += 2;
+			plus_per_line += 1;//increase each row by 1
 		}
 		else
 		{
-			EndSpace++;
-			EndLine -= 2;
+			plus_per_line -= 1;//decrease each row by 1
+		}
+		cout << endl;
+	}
+	*/
+	for (int row = 1; row <= 20; ++row)//runs 20 iterations 
+	{
+		int plus_per_line = (row <= 10) ? row : 21 - row;//prints rows 1-10 as row 1-10, prints rows 11-20 as 21-row (10,9,8 etc.) 
+		for (int line = 1; line <= plus_per_line; ++line) 
+		{
+			cout << "+";
 		}
 		cout << endl;
 	}
