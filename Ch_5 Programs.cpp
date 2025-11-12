@@ -9,16 +9,17 @@ int main()
 	ifstream input_file;
 	input_file.open("People.txt");// Open file
 	if (!input_file)// Test for open errors
+	{
 		cout << "Error opening file.\n";
+	}
+	int P_num;//Population
 
-	int P_num;// Population
-
-	// Display Population Bar Chart Header
+	//Display Population Bar Chart Header
 	cout << "My Home Town\n";
 	cout << "(each * represents 1000 people)\n\n";
 
-	for (int year = 1; year <= 6; year++)
-	{  // One iteration per year
+	for (int year = 1; year <= 6; year++)// One iteration per year
+	{  
 		switch (year)
 		{
 		case 1: cout << "1900 ";
@@ -37,13 +38,12 @@ int main()
 
 		input_file >> P_num;// Read from file
 
-		P_num /= 1000;// calculate one per 1000 people
+		P_num /= 1000;//calculate one per 1000 people
 
-		for (int Arisk = 1; Arisk <= P_num; Arisk++)
-		{  // Display one asterisk per iteration and one iteration per 1000 people 
+		for (int astrk = 1; astrk <= P_num; astrk++)// Display one asterisk per iteration and one iteration per 1000 people
+		{   
 			cout << "*";
 		}
-
 		cout << endl;
 	}
 	input_file.close();//Closes the file
