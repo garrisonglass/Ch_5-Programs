@@ -8,28 +8,26 @@ using namespace std;
 
 int main()
 {
-	int RandNum, Seed, Guess;
+	int RandNum, Guess;
 	int count = 1;
 
-	Seed = time(0);
-	srand(Seed);
-	RandNum = 1 + rand() % 25;
+	srand(time(0));
+	RandNum = 1 + rand() % 25; 
 	
-	// cout << RandNum << endl;
-
 	cout << "I'm thinking of a number between 1 and 25\n";
 	cout << "Can you guess what it is? ";
 	cin >> Guess;
 
-	while (Guess > RandNum)
+	while (Guess != RandNum)//output for wrong answers
 	{
-		cout << "Too high. Try again.\n";
-		cin >> Guess;
-		count++;
-	}
-	while (Guess < RandNum)
-	{
-		cout << "Too low. Try again.\n";
+		if (Guess > RandNum)//too high
+		{
+			cout << "Too high. Try again.\n";
+		}
+		else//too low
+		{ 
+			cout << "Too low. Try again.\n";
+		}
 		cin >> Guess;
 		count++;
 	}
