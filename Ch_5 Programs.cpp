@@ -23,7 +23,6 @@ int main()
 
 	for (int year = 1900; year <= 2000; year+=20)//Calculate year for each iteration 
 	{
-	
 		cout << year << " ";//print year 
 		file >> P_num;// Read from file
 
