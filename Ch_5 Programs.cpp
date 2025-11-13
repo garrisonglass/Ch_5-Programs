@@ -23,24 +23,10 @@ int main()
 	cout << "The population growth for " << Name_of_Town << endl;
 	cout << "(each * represents 1000 people)\n\n";
 
-	for (int year = 1; year <= 6; year++)// One iteration per year
+	for (int year = 1900; year <= 2000; year+=20)// One iteration per year
 	{
-		switch (year)
-		{
-		case 1: cout << "1900 ";
-			break;
-		case 2: cout << "1920 ";
-			break;
-		case 3: cout << "1940 ";
-			break;
-		case 4: cout << "1960 ";
-			break;
-		case 5: cout << "1980 ";
-			break;
-		case 6: cout << "2000 ";
-			break;
-		}
-
+	
+		cout << year << " ";//print year 
 		file >> P_num;// Read from file
 
 		P_num /= 1000;//calculate one per 1000 people
