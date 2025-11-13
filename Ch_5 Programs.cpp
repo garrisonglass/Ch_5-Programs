@@ -19,14 +19,14 @@ int main()
 	{
 		InputFile >> name;// Read first name
 		first = name;
-		last = name;
+		//last = name; The example program had something similar but this program runs whithout it. 
 		
-		while (InputFile >> name)// Read till end of file
+		while (InputFile >> name)//Loop to sort names while reading file
 		{
 			
-			if (name < first)// To sort students by name
+			if (name < first)//To determine which student is first 
 				first = name;
-			if (name > last)
+			if (name > last)//To determine which student is last
 				last = name;
 			count++;//counts iterations after the first read
 			
