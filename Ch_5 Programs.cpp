@@ -27,7 +27,7 @@ int main()
 	for (int row = 1; row <= 20; ++row)//runs 20 iterations 
 	{
 		int plus_per_line = (row <= 10) ? row : 21 - row;//prints rows 1-10 as row 1-10, prints rows 11-20 as 21-row (10,9,8 etc.) 
-		for (int line = 1; line <= plus_per_line; ++line) 
+		for (int plus = 1; plus <= plus_per_line; ++plus)// 
 		{
 			cout << "+";
 		}
