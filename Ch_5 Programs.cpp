@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
 	string file_name, Name_of_Town;
+	int P_num;//Population
 	cout << "Please enter the file name.\n Hint: it is People.txt ";
 	cin >> file_name;
 	ifstream file(file_name);//open file to read
@@ -16,8 +17,7 @@ int main()
 	{
 		cout << "Error opening file.\n";
 	}
-	int P_num;//Population
-		
+
 	cout << "The population growth for " << Name_of_Town << endl;//Display Population Bar Chart Header
 	cout << "(each * represents 1000 people)\n\n";
 
