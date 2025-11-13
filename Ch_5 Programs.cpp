@@ -21,7 +21,7 @@ int main()
 	cout << "The population growth for " << Name_of_Town << endl;//Display Population Bar Chart Header
 	cout << "(each * represents 1000 people)\n\n";
 
-	for (int year = 1900; year <= 2000; year+=20)// One iteration per year
+	for (int year = 1900; year <= 2000; year+=20)//Calculate year for each iteration 
 	{
 	
 		cout << year << " ";//print year 
