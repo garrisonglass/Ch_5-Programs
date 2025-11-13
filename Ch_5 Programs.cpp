@@ -6,9 +6,8 @@ using namespace std;
 
 int main()
 {
-	int Days;
-	float daily_Avg; //Days of growth and the average daily population increase
-	double size_of_pop;//The average daily population increase
+	int days;
+	float daily_Avg, size_of_pop;//The average daily population increase and the size of the population
 
 	cout << "What is the starting number of organisms? ";
 	cin >> size_of_pop;
@@ -16,10 +15,10 @@ int main()
 	cout << "(as a percentage of current population)? ";
 	cin >> daily_Avg;
 	cout << "Enter the number of days of growth: ";
-	cin >> Days;
+	cin >> days;
 
 	// Input Validation
-	while (size_of_pop < 2 || daily_Avg < 0 || Days < 1)
+	while (size_of_pop < 2 || daily_Avg < 0 || days < 1)
 	{
 		if (size_of_pop < 2)//population is too small
 		{
@@ -34,24 +33,24 @@ int main()
 			cout << "(as a percentage of current population)? ";
 			cin >> daily_Avg;
 		}
-		else if (Days < 1)//number of days is not enough
+		else if (days < 1)//number of days is not enough
 		{
 			cout << "Number of days must be greater than 0.\n";
 			cout << "Enter the number of days of growth: ";
-			cin >> Days;
+			cin >> days;
 		}
 	}
 
 
 	// Calculate and display daily increase
-	cout << "\nTable displaying population increase over " << Days << " days.\n";
-	cout << "      Day              Size of population\n";//line up the table
+	cout << "\nPopulation increase over " << days << " days.\n";
+	cout << "\nDay\tSize of population\n";//line up the table
 
-	for (int day = 1; day <= Days; day++)
-	{
-		cout << "      " << setw(2) << day << "                      ";
+	for (int day = 1; day <= days; day++)//loop to print days from 1 to 'days' entered
+	{ 
+		cout << day << "\t";
 		cout << size_of_pop << endl;
-		size_of_pop *= (1 + (daily_Avg / 100));
+		size_of_pop *= (1 + (daily_Avg / 100));//updates size of population after each iteration based of average increase 
 	}
 	return 0;
 }
